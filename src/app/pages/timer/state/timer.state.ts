@@ -1,6 +1,6 @@
 import { State, Selector, Action, StateContext } from '@ngxs/store';
 import { interval } from 'rxjs';
-import { map, take } from 'rxjs/operators';
+import { map, take, catchError } from 'rxjs/operators';
 import { TimerModel } from '@models/timer.model';
 import { DogService } from '@services/dog.service';
 import { DogResponseModel } from '@models/dog-response.model';
@@ -21,7 +21,7 @@ const name = 'Timer';
 
 const defaults: TimerModel = {
   status: TimerStatusEnum.CHOOSE,
-  time: TimeIntervalEnum.TEN_SECONDS,
+  time: TimeIntervalEnum.ZERO,
   ticking: false,
   image: null,
   message: 'Good things happen for those who wait!',
@@ -118,7 +118,9 @@ export class TimerState {
   @Action(ResetAction)
   resetAction(ctx: StateContext<TimerModel>) {
     const status = TimerStatusEnum.CHOOSE;
-    return ctx.patchState({status});
+    const ticking = false;
+    const display = moment(TimeIntervalEnum.ZERO).format('mm:ss');
+    return ctx.patchState({status, ticking, display});
   }
 
   @Action(LoadDogAction)
@@ -131,7 +133,8 @@ export class TimerState {
           } else {
             ctx.dispatch(new LoadDogFailureAction());
           }
-        })
+        }),
+        catchError(() => ctx.dispatch(new LoadDogFailureAction()))
       );
   }
 
