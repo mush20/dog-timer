@@ -1,0 +1,35 @@
+<tm-theme>
+  <section class="timer-component__content">
+    <section class="timer-component__content-section">
+      <mat-tab-group [selectedIndex]="status$ | async">
+        <mat-tab>
+          <ng-template matTabContent>
+            <tm-timer-commands (start)="startTimer($event)"></tm-timer-commands>
+          </ng-template>
+        </mat-tab>
+        <mat-tab>
+          <ng-template matTabContent>
+            <tm-timer-display [display]="display$ | async"
+                              [message]="message$ | async"
+                              [ticking]="ticking$ | async"
+                              (start)="startTimer(0)"
+                              (stop)="stopTimer()"
+                              (reset)="resetTimer()"></tm-timer-display>
+          </ng-template>
+        </mat-tab>
+        <mat-tab>
+          <ng-template matTabContent>
+            <tm-dog-display [image]="image$ | async"
+                            (reset)="resetTimer()"></tm-dog-display>
+          </ng-template>
+        </mat-tab>
+        <mat-tab>
+          <ng-template matTabContent>
+            <tm-error-display [error]="error$ | async"
+                              (reset)="resetTimer()"></tm-error-display>
+          </ng-template>
+        </mat-tab>
+      </mat-tab-group>
+    </section>
+  </section>
+</tm-theme>

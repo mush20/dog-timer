@@ -1,0 +1,10 @@
+@import "main";
+
+.timer-component {
+
+  &__content {
+    @include flex-column-grow();
+    @include align-items(center);
+    @include justify-content(center);
+  }
+}

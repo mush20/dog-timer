@@ -1,0 +1,11 @@
+@import "main";
+
+.timer-display-component {
+
+  &__digital {
+    margin: 0px 5px 0px 0px;
+    text-align: center;
+    font-size: 140px;
+    @include font-digital-7-mono();
+  }
+}

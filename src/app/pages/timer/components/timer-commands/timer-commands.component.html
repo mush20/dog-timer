@@ -1,0 +1,23 @@
+<section class="component__content">
+  <section class="component__section--shrink-column">
+    <h4 class="text--center">
+      Wait for the timer to get a brand new dog!<br>
+      Every time!<br>
+      So, how long you will you wait for a dog?
+    </h4>
+  </section>
+  <section class="component__section--grow-column">
+    <button mat-raised-button
+            color="primary"
+            (click)="start10secs()">Only 10 secs!
+    </button>
+    <button mat-raised-button
+            color="primary"
+            (click)="start30secs()">30 secs and that's it!
+    </button>
+    <button mat-raised-button
+            color="primary"
+            (click)="start60secs()">A full minute!
+    </button>
+  </section>
+</section>

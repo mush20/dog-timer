@@ -1,0 +1,33 @@
+@import "main";
+
+.theme-component {
+
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+
+  header {
+    @include flex-column-shrink();
+  }
+
+  main {
+    @include flex-column-grow();
+
+    .mat-tab-header {
+      display: none;
+    }
+
+    .mat-tab-body {
+
+      min-height: 400px;
+
+      @include breakpoint(xs) {
+        min-width: 350px;
+      }
+
+      @include breakpoint(sm) {
+        min-width: 400px;
+      }
+    }
+  }
+}

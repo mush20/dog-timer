@@ -1,0 +1,88 @@
+@import "variables";
+@import "flex";
+@import "fonts";
+
+@mixin page_base_style() {
+  * {
+    @include font-roboto();
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .text {
+    &--center {
+      text-align: center;
+    }
+  }
+}
+
+@mixin button_row_style() {
+  button {
+    margin: 5px;
+    @include flex(1 1 auto);
+  }
+}
+
+@mixin button_style() {
+
+  button {
+    margin: 5px;
+  }
+}
+
+@mixin component_base_style() {
+
+  .component {
+
+    &__content {
+      min-height: 400px;
+      @include flexbox();
+      @include flex-direction(column);
+    }
+
+    &__section--grow-row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex(1 1 auto);
+      @include button_row_style();
+    }
+
+    &__section--grow-column {
+      @include flexbox();
+      @include flex-direction(column);
+      @include flex(1 1 auto);
+      @include button_style();
+    }
+
+    &__section--shrink-row {
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex(0 1 auto);
+      @include button_row_style();
+    }
+
+    &__section--shrink-column {
+      @include flexbox();
+      @include flex-direction(column);
+      @include flex(0 1 auto);
+      @include button_style();
+    }
+  }
+
+  .content-centered {
+    @include justify-content(center);
+    @include align-items(center);
+  }
+
+  .error-display {
+    background-color: $color-warn;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+}

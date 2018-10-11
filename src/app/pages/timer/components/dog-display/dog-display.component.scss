@@ -1,0 +1,23 @@
+@import "main";
+
+.dog-dialog-component {
+
+  &__image {
+    @include flex-column-grow();
+    @include align-items(center);
+    img {
+      display: block;
+      height: auto;
+
+      @include breakpoint(xs) {
+        width: 250px;
+        max-height: 250px;
+      }
+
+      @include breakpoint(sm) {
+        width: 300px;
+        max-height: 300px;
+      }
+    }
+  }
+}

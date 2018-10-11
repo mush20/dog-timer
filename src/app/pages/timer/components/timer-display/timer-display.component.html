@@ -1,0 +1,26 @@
+<section class="component__content">
+  <section class="component__section--shrink-column">
+    <tm-blink-text class="text--center">{{message}}</tm-blink-text>
+    <p class="timer-display-component__digital">
+      {{display}}
+    </p>
+  </section>
+  <section class="component__section--shrink-row">
+    <button *ngIf="!ticking"
+            mat-raised-button
+            color="primary"
+            (click)="start.next()">Resume
+    </button>
+    <button *ngIf="ticking"
+            mat-raised-button
+            color="primary"
+            (click)="stop.next()">Stop
+    </button>
+    <button mat-raised-button
+            color="primary"
+            [disabled]="ticking"
+            (click)="reset.next()">Reset
+    </button>
+  </section>
+</section>
+

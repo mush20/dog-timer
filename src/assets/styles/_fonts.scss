@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('/assets/fonts/digital-7/digital-7.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'digital-7-mono';
+  src: url('/assets/fonts/digital-7/digital-7-mono.ttf') format('truetype'),
+}
+
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+@mixin font-roboto() {
+  font-family: Roboto;
+  @include font-smoothing();
+}
+
+@mixin font-digital-7() {
+  font-family: 'digital-7', Roboto;
+  @include font-smoothing();
+}
+
+@mixin font-digital-7-mono() {
+  font-family: 'digital-7-mono', Roboto;
+  @include font-smoothing();
+}

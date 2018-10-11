@@ -1,0 +1,21 @@
+<section class="component__content">
+  <section *ngIf="image; else imageLoading;" class="component__section--grow-column">
+    <h1 class="text--center">Here's your dog!</h1>
+    <section class="dog-dialog-component__image">
+      <img [src]="image"
+           alt="Your random dog!">
+    </section>
+    <section class="component__section--shrink-row">
+      <button mat-raised-button
+              color="primary"
+              (click)="reset.next()">Thanks
+      </button>
+    </section>
+  </section>
+  <ng-template #imageLoading>
+    <section class="component__section--grow-column content-centered">
+      <mat-spinner></mat-spinner>
+      <tm-blink-text>Loading your dog</tm-blink-text>
+    </section>
+  </ng-template>
+</section>
