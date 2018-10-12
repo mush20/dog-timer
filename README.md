@@ -2,6 +2,8 @@
 
 This is demo project that makes you wait for a dog image.
 
+[Demo](https://dog-timer-6af41.firebaseapp.com)
+
 ## Resources
 - [Angular CLI](https://github.com/angular/angular-cli)
 - [Angular](https://angular.io/)
