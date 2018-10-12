@@ -1,6 +1,6 @@
 # Dog Timer
 
-This is demo project that makes you wait for a dog.
+This is demo project that makes you wait for a dog image.
 
 ## Resources
 - [Angular CLI](https://github.com/angular/angular-cli)
@@ -15,7 +15,9 @@ This is demo project that makes you wait for a dog.
 ## Install
 
 `git clone https://github.com/mush20/dog-timer.git`
+
 `cd dog-timer`
+
 `npm install` or `yarn install`
 
 ## Serve
