@@ -30,6 +30,7 @@ describe('TimerState', () => {
     store.selectOnce(state => state.Timer).subscribe((state: TimerModel) => {
       expect(state.display).toBe(display);
       expect(state.status).toBe(status);
+      expect(state.image).toBeNull();
       expect(state.ticking).toBeTruthy();
     });
   });

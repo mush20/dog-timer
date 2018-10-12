@@ -80,7 +80,7 @@ export class TimerState {
     const message = this.renderTimerMessage(time);
     const display = moment(time).format('mm:ss');
 
-    ctx.patchState({time, status, display, ticking, message});
+    ctx.patchState({...defaults, time, status, display, ticking, message});
     return this.dispatchTickAction(ctx);
   }
 

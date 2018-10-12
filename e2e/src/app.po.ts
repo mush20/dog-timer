@@ -7,8 +7,8 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getDisplayText() {
-    return element(by.id('timer-display')).getText();
+  getTimerDisplayElement() {
+    return element(by.id('timer-display'));
   }
 
   // Buttons
@@ -46,6 +46,11 @@ export class AppPage {
 
   getErrorMessageElement() {
     return element(by.id('timer-error-display'));
+  }
+
+  waitTimerDisplayElement() {
+    const EC = protractor.ExpectedConditions;
+    browser.wait(EC.visibilityOf(this.getTimerDisplayElement()));
   }
 
   waitForDogImageElement() {
