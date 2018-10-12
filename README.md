@@ -1,14 +1,26 @@
-# NgTimer
+# Dog Timer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+This is demo project that makes you wait for a dog.
 
-## Development server
+## Resources
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [NGXS](https://ngxs.gitbook.io/ngxs/)
+- [Moment.js](https://momentjs.com/)
+- [Dog API](https://dog.ceo/dog-api)
+- [Responsive break points mixins](https://medium.com/developing-with-sass/creating-a-dead-simple-sass-mixin-to-handle-responsive-breakpoints-889927b37740)
+- [Flexbox mixins](https://gist.github.com/richardtorres314/26b18e12958ba418bb37993fdcbfc1bd)
+
+## Install
+
+`git clone https://github.com/mush20/dog-timer.git`
+`cd dog-timer`
+`npm install` or `yarn install`
+
+## Serve
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -22,6 +34,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
