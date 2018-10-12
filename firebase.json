@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ng-timer",
+    "public": "dist/dog-timer",
     "ignore": [
       "firebase.json",
       "**/.*",
